@@ -1,0 +1,15 @@
+Q3)
+fun main(args: Array<String>) {
+var cardPoints = 7_000
+val cardLevel :String = when{
+cardPoints >=0 && cardPoints <1000 -> {"pearl"}
+cardPoints >=1000 && cardPoints <5_000 -> {"silver"}
+cardPoints >=5_000 && cardPoints <7_000 -> {"gold"}
+else -> {"platinum"}
+}
+val plural =when{
+cardPoints > 1 || cardPoints == 0 -> {"s"}
+else -> {""}
+}
+println("You have $cardPoints point$plural and are at the $cardLevel level.")
+}
